@@ -1,5 +1,0 @@
-#!/usr/bin/env zsh
-
-script_dir=$(dirname "$(realpath $0)")
-project_root=$(realpath "$script_dir/..")
-"${project_root}/src/llm-tool.ts" "$@"

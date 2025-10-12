@@ -1,11 +1,19 @@
 {
-  "name": "llm-util",
+  "name": "@casaper/llm-util",
   "version": "1.0.0",
-  "description": "",
+  "description": "Personal experimental cli LLM utilities running on local Ollama models.",
   "main": "index.js",
   "scripts": {
+    "build": "esbuild src/llm-tool.ts --bundle --platform=node --target=node18 --format=cjs --outfile=dist/llm-tool.js --banner:js=\"#!/usr/bin/env node\"",
+    "clean": "rimraf dist",
+    "prepare": "pnpm run build",
+    "prepublishOnly": "pnpm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "llm-tool": "dist/llm-tool.js"
+  },
+  "files": ["dist"],
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -39,6 +47,8 @@
     "prettier": "^3.6.2",
     "prettier-plugin-sh": "^0.18.0",
     "rambdax": "^11.3.1",
-    "typescript-eslint": "^8.46.0"
+    "typescript-eslint": "^8.46.0",
+    "esbuild": "^0.18.19",
+    "rimraf": "^5.0.0"
   }
 }

@@ -1,5 +1,3 @@
-#!/usr/bin/env -S npx tsx
-
 import { program } from '@commander-js/extra-typings';
 
 import { correctCommand, factsCommand } from './commands';
