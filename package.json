@@ -2,11 +2,15 @@
   "name": "@casaper/llm-util",
   "version": "1.0.0",
   "description": "Personal experimental cli LLM utilities running on local Ollama models.",
+  "keywords": [],
+  "author": "Casaper <me@casaper.dev>",
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild src/llm-tool.ts --bundle --platform=node --target=node18 --format=cjs --outfile=dist/llm-tool.js --banner:js=\"#!/usr/bin/env node\"",
+    "build": "esbuild src/llm-tool.ts --bundle --platform=node --target=node18 --format=cjs --outfile=dist/llm-tool.js --banner:js=\"#!/usr/bin/env node\" --tree-shaking=true --minify --analyze",
     "clean": "rimraf dist",
     "prepare": "pnpm run build",
+    "postbuild": "chmod +x dist/llm-tool.js",
     "prepublishOnly": "pnpm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,28 +18,20 @@
     "llm-tool": "dist/llm-tool.js"
   },
   "files": ["dist"],
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "packageManager": "pnpm@10.18.2+sha512.9fb969fa749b3ade6035e0f109f0b8a60b5d08a1a87fdf72e337da90dcc93336e2280ca4e44f2358a649b83c17959e9993e777c2080879f3801e6f0d999ad3dd",
   "dependencies": {
     "@commander-js/extra-typings": "^14.0.0",
-    "@npmcli/promise-spawn": "^8.0.3",
-    "@types/node": "^24.7.2",
-    "date-fns": "^4.1.0",
-    "ollama": "^0.6.0",
-    "tslib": "^2.8.1",
-    "tsx": "^4.20.6",
-    "typescript": "^5.9.3",
-    "yaml": "^2.8.1"
+    "cli-color": "^2.0.4",
+    "commander": "^14.0.1",
+    "ollama": "^0.6.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.37.0",
     "@eslint/json": "^0.13.2",
     "@types/cli-color": "^2.0.6",
+    "@types/node": "^24.7.2",
     "@types/npmcli__promise-spawn": "^6.0.3",
-    "cli-color": "^2.0.4",
-    "commander": "^14.0.1",
+    "esbuild": "^0.25.10",
     "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-formatter-unix": "^8.40.0",
@@ -47,8 +43,10 @@
     "prettier": "^3.6.2",
     "prettier-plugin-sh": "^0.18.0",
     "rambdax": "^11.3.1",
-    "typescript-eslint": "^8.46.0",
-    "esbuild": "^0.25.10",
-    "rimraf": "^6.0.1"
+    "rimraf": "^6.0.1",
+    "tslib": "^2.8.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.0"
   }
 }
