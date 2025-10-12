@@ -8,7 +8,9 @@
   "homepage": "https://github.com/casaper/llm-util#readme",
   "keywords": ["cli", "llm", "ollama", "markdown"],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
   },
   "repository": {
     "type": "git",
@@ -44,8 +46,10 @@
     "@eslint/json": "^0.13.2",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/exec": "^7.1.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.6",
+    "@semantic-release/npm": "^12.0.2",
     "@semantic-release/release-notes-generator": "^14.1.0",
     "@types/cli-color": "^2.0.6",
     "@types/node": "^24.7.2",
