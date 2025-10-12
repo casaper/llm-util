@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/casaper/llm-util/compare/v1.0.0...v1.1.0) (2025-10-12)
+
+### Features
+
+* **release:** add npm publish workflow ([d068be6](https://github.com/casaper/llm-util/commit/d068be6c0a391741371d8a4100cd9e94174ff9c6))
+
 ## 1.0.0 (2025-10-12)
 
 ### Features
