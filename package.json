@@ -1,12 +1,17 @@
 {
   "name": "@casaper/llm-util",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Personal experimental cli LLM utilities running on local Ollama models.",
   "bugs": {
     "url": "https://github.com/casaper/llm-util/issues"
   },
   "homepage": "https://github.com/casaper/llm-util#readme",
-  "keywords": ["cli", "llm", "ollama", "markdown"],
+  "keywords": [
+    "cli",
+    "llm",
+    "ollama",
+    "markdown"
+  ],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/",
@@ -23,7 +28,11 @@
   "bin": {
     "llm-util": "dist/llm-util.js"
   },
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "run-s clean build:types build:cjs postbuild",
     "release": "semantic-release",

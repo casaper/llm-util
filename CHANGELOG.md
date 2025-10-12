@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/casaper/llm-util/compare/v1.2.0...v1.2.1) (2025-10-12)
+
+### Bug Fixes
+
+* **naming:** also rename llm-tool to llm-util ([568351f](https://github.com/casaper/llm-util/commit/568351f68b69278b05e0bf8d53a180dd668149bf))
+* **naming:** released binary name not matching project name ([e35f595](https://github.com/casaper/llm-util/commit/e35f5957f1d6c5cf9756f2753c68e524cebbc5f7))
+
 ## [1.2.0](https://github.com/casaper/llm-util/compare/v1.1.0...v1.2.0) (2025-10-12)
 
 ### Features
