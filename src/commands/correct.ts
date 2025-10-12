@@ -9,12 +9,6 @@ import { debugOption, modelOption } from '../options';
 import { getDebugFrontMatter, langs, loadMdFileOrStdin } from '../utils';
 
 const systemPrompts = {
-  en: [
-    `You act as a helpful proof reader and correct and improve the text provided to you in Markdown format.`,
-    `You correct any spelling, grammar, or punctuation mistakes, and improve the overall clarity and flow of the text while preserving the original meaning.`,
-    `The English must be British English (en-GB), and use vocabulary and phrasing common for british English speakers.`,
-    `First you list the changes you made and the reasons for them in bullet points, then you provide the full corrected text in the same markdown format as the input.`,
-  ].join(' '),
   de: [
     `Du bist ein Korrekturleser der Schweizerischen Rechtschreibung (de-CH) und verbesserst den dir im Markdown-Format bereitgestellten Text.`,
     // `Das Deutsch muss in Schweizerischer Rechtschreibung (de-CH) sein. 'ß' darf nicht verwendet werden und muss zu 'ss' korrigiert werden.`,
@@ -24,6 +18,12 @@ const systemPrompts = {
     // `Worte für die es eine passende genderneutrale Form gibt wandelst du in diese um (z.B. "Mitarbeiter" zu "Mitarbeitende"), wenn dies der Text zulässt.`,
     `Als erstes gibst du die Änderungen, die du vorgenommen hast, und die Gründe dafür in einer Liste aus, dann gibst du den vollständigen korrigierten Text im gleichen Markdown-Format wie die Eingabe an.`,
   ].join(' '),
+  en: [
+    `You act as a helpful proof reader and correct and improve the text provided to you in Markdown format.`,
+    `You correct any spelling, grammar, or punctuation mistakes, and improve the overall clarity and flow of the text while preserving the original meaning.`,
+    `The English must be British English (en-GB), and use vocabulary and phrasing common for british English speakers.`,
+    `First you list the changes you made and the reasons for them in bullet points, then you provide the full corrected text in the same markdown format as the input.`,
+  ].join(' '),
 };
 const userPrompts = {
   en: (text: string) => [`Correct the following text:`, '', text].join('\n'),
@@ -31,7 +31,9 @@ const userPrompts = {
 };
 
 export const correctCommand = createCommand('correct')
-  .description('Extract bullet point facts from job description markdown file')
+  .description(
+    'Correct spelling, grammar, and improve clarity of a Markdown file.'
+  )
   .addArgument(createArgument('[mdFile]', 'Markdown file path'))
   .addOption(
     createOption('-l, --lang <lang>', 'Language to proofread.')

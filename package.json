@@ -1,24 +1,37 @@
 {
   "name": "@casaper/llm-util",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Personal experimental cli LLM utilities running on local Ollama models.",
-  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/casaper/llm-util/issues"
+  },
+  "homepage": "https://github.com/casaper/llm-util#readme",
+  "keywords": ["cli", "llm", "ollama", "markdown"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casaper/llm-util.git"
+  },
   "author": "Casaper <me@casaper.dev>",
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/llm-tool.js",
+  "types": "dist/types/llm-tool.d.ts",
+  "bin": {
+    "llm-tool": "dist/llm-tool.js"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
   "scripts": {
-    "build": "esbuild src/llm-tool.ts --bundle --platform=node --target=node18 --format=cjs --outfile=dist/llm-tool.js --banner:js=\"#!/usr/bin/env node\" --tree-shaking=true --minify --analyze",
+    "build": "run-s clean build:types build:cjs postbuild",
+    "build:cjs": "esbuild src/llm-tool.ts --bundle --platform=node --target=node22 --format=cjs --tsconfig=tsconfig.build.json --outfile=dist/llm-tool.js --banner:js=\"#!/usr/bin/env node\" --tree-shaking=true --minify --analyze",
+    "build:types": "tsc -p tsconfig.build.json",
     "clean": "rimraf dist",
     "prepare": "pnpm run build",
     "postbuild": "chmod +x dist/llm-tool.js",
     "prepublishOnly": "pnpm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin": {
-    "llm-tool": "dist/llm-tool.js"
-  },
-  "files": ["dist"],
-  "packageManager": "pnpm@10.18.2+sha512.9fb969fa749b3ade6035e0f109f0b8a60b5d08a1a87fdf72e337da90dcc93336e2280ca4e44f2358a649b83c17959e9993e777c2080879f3801e6f0d999ad3dd",
   "dependencies": {
     "@commander-js/extra-typings": "^14.0.0",
     "cli-color": "^2.0.4",
@@ -40,6 +53,7 @@
     "glob": "^11.0.3",
     "globals": "^16.4.0",
     "jiti": "^2.6.1",
+    "npm-run-all2": "^8.0.4",
     "prettier": "^3.6.2",
     "prettier-plugin-sh": "^0.18.0",
     "rambdax": "^11.3.1",
@@ -48,5 +62,9 @@
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.0"
+  },
+  "packageManager": "pnpm@10.18.2+sha512.9fb969fa749b3ade6035e0f109f0b8a60b5d08a1a87fdf72e337da90dcc93336e2280ca4e44f2358a649b83c17959e9993e777c2080879f3801e6f0d999ad3dd",
+  "engines": {
+    "node": ">= 22"
   }
 }
