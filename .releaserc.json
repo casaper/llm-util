@@ -33,7 +33,7 @@
     [
       "@semantic-release/github",
       {
-        "assets": [{ "path": "dist/llm-tool.js", "label": "CLI (dist)" }]
+        "assets": [{ "path": "dist/llm-util.js", "label": "CLI (dist)" }]
       }
     ],
     [

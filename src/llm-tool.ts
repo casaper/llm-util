@@ -3,7 +3,7 @@ import { program } from '@commander-js/extra-typings';
 import { correctCommand, factsCommand } from './commands';
 
 program
-  .name('llm-tool')
+  .name('llm-util')
   .description('Markdown LLM Tools')
   .addCommand(factsCommand)
   .addCommand(correctCommand)

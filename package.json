@@ -6,12 +6,7 @@
     "url": "https://github.com/casaper/llm-util/issues"
   },
   "homepage": "https://github.com/casaper/llm-util#readme",
-  "keywords": [
-    "cli",
-    "llm",
-    "ollama",
-    "markdown"
-  ],
+  "keywords": ["cli", "llm", "ollama", "markdown"],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/",
@@ -23,24 +18,20 @@
   },
   "author": "Casaper <me@casaper.dev>",
   "license": "MIT",
-  "main": "dist/llm-tool.js",
-  "types": "dist/types/llm-tool.d.ts",
+  "main": "dist/llm-util.js",
+  "types": "dist/types/llm-util.d.ts",
   "bin": {
-    "llm-tool": "dist/llm-tool.js"
+    "llm-util": "dist/llm-util.js"
   },
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
+  "files": ["dist", "README.md", "LICENSE"],
   "scripts": {
     "build": "run-s clean build:types build:cjs postbuild",
     "release": "semantic-release",
-    "build:cjs": "esbuild src/llm-tool.ts --bundle --platform=node --target=node22 --format=cjs --tsconfig=tsconfig.build.json --outfile=dist/llm-tool.js --banner:js=\"#!/usr/bin/env node\" --tree-shaking=true --minify --analyze",
+    "build:cjs": "esbuild src/llm-util.ts --bundle --platform=node --target=node22 --format=cjs --tsconfig=tsconfig.build.json --outfile=dist/llm-util.js --banner:js=\"#!/usr/bin/env node\" --tree-shaking=true --minify --analyze",
     "build:types": "tsc -p tsconfig.build.json",
     "clean": "rimraf dist",
     "prepare": "pnpm run build",
-    "postbuild": "chmod +x dist/llm-tool.js",
+    "postbuild": "chmod +x dist/llm-util.js",
     "prepublishOnly": "pnpm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
