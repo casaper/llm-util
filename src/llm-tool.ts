@@ -2,7 +2,7 @@
 
 import { program } from '@commander-js/extra-typings';
 
-import { correctCommand, factsCommand } from './llm-lib';
+import { correctCommand, factsCommand } from './commands';
 
 program
   .name('llm-tool')

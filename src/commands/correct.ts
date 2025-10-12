@@ -5,13 +5,13 @@ import {
 } from '@commander-js/extra-typings';
 import ollama from 'ollama';
 
-import { debugOption, modelOption } from './options';
+import { debugOption, modelOption } from '../options';
 import {
   getDebugFrontMatter,
   langs,
+  loadMdFileOrStdin,
   modelDict,
-  readMdFileIfExists,
-} from './utils';
+} from '../utils';
 
 const systemPrompts = {
   en: [
@@ -47,15 +47,7 @@ export const correctCommand = createCommand('correct')
   .addOption(debugOption)
   .action(async (mdFile, { model, debug, lang }) => {
     try {
-      const text =
-        mdFile === '-' || !mdFile?.length
-          ? await new Promise<string>((resolve, reject) => {
-              let data = '';
-              process.stdin.on('data', chunk => (data += chunk));
-              process.stdin.on('end', () => resolve(data));
-              process.stdin.on('error', reject);
-            })
-          : await readMdFileIfExists(mdFile);
+      const text = await loadMdFileOrStdin(mdFile);
       const response = await ollama.chat({
         model: modelDict[model],
         messages: [

@@ -1,8 +1,8 @@
 import { createArgument, createCommand } from '@commander-js/extra-typings';
 import ollama from 'ollama';
 
-import { debugOption, modelOption } from './options';
-import { getDebugFrontMatter, modelDict, readMdFileIfExists } from './utils';
+import { debugOption, modelOption } from '../options';
+import { getDebugFrontMatter, loadMdFileOrStdin, modelDict } from '../utils';
 
 export const factsCommand = createCommand('facts')
   .description('Extract bullet point facts from job description markdown file')
@@ -11,15 +11,7 @@ export const factsCommand = createCommand('facts')
   .addOption(debugOption)
   .action(async (mdFile, { model, debug }) => {
     try {
-      const text =
-        mdFile === '-' || !mdFile?.length
-          ? await new Promise<string>((resolve, reject) => {
-              let data = '';
-              process.stdin.on('data', chunk => (data += chunk));
-              process.stdin.on('end', () => resolve(data));
-              process.stdin.on('error', reject);
-            })
-          : await readMdFileIfExists(mdFile);
+      const text = await loadMdFileOrStdin(mdFile);
       const response = await ollama.chat({
         model: modelDict[model],
         messages: [
