@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/casaper/llm-util/compare/v1.1.0...v1.2.0) (2025-10-12)
+
+### Features
+
+* **dev:** .env.local for development ([1100c49](https://github.com/casaper/llm-util/commit/1100c49854148c8ce171859fdf4d127a4e97a755))
+* **release:** add semantic-release npm plugin for npm version ([014edea](https://github.com/casaper/llm-util/commit/014edeaff9efc96a489c10723ebf9fa04735b1a2))
+
 ## [1.1.0](https://github.com/casaper/llm-util/compare/v1.0.0...v1.1.0) (2025-10-12)
 
 ### Features
