@@ -6,12 +6,7 @@ import {
 import ollama from 'ollama';
 
 import { debugOption, modelOption } from '../options';
-import {
-  getDebugFrontMatter,
-  langs,
-  loadMdFileOrStdin,
-  modelDict,
-} from '../utils';
+import { getDebugFrontMatter, langs, loadMdFileOrStdin } from '../utils';
 
 const systemPrompts = {
   en: [
@@ -49,7 +44,7 @@ export const correctCommand = createCommand('correct')
     try {
       const text = await loadMdFileOrStdin(mdFile);
       const response = await ollama.chat({
-        model: modelDict[model],
+        model,
         messages: [
           {
             role: 'system',

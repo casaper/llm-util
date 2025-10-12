@@ -1,2 +1,2 @@
-export * from './debugOption';
-export * from './modelOption';
+export * from './debug-option';
+export * from './model-option';

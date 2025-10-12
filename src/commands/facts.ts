@@ -2,7 +2,7 @@ import { createArgument, createCommand } from '@commander-js/extra-typings';
 import ollama from 'ollama';
 
 import { debugOption, modelOption } from '../options';
-import { getDebugFrontMatter, loadMdFileOrStdin, modelDict } from '../utils';
+import { getDebugFrontMatter, loadMdFileOrStdin } from '../utils';
 
 export const factsCommand = createCommand('facts')
   .description('Extract bullet point facts from job description markdown file')
@@ -13,7 +13,7 @@ export const factsCommand = createCommand('facts')
     try {
       const text = await loadMdFileOrStdin(mdFile);
       const response = await ollama.chat({
-        model: modelDict[model],
+        model,
         messages: [
           {
             role: 'system',
