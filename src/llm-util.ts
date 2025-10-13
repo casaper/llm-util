@@ -1,7 +1,7 @@
 import { program } from '@commander-js/extra-typings';
 
 import { description, version } from '../package.json';
-import { correctCommand, factsCommand } from './commands';
+import { commitCommand, correctCommand, factsCommand } from './commands';
 
 program
   .name('llm-util')
@@ -9,4 +9,5 @@ program
   .version(version)
   .addCommand(factsCommand)
   .addCommand(correctCommand)
+  .addCommand(commitCommand)
   .parse();
