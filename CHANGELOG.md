@@ -1,3 +1,15 @@
+## [1.3.0](https://github.com/casaper/llm-util/compare/v1.2.1...v1.3.0) (2025-10-13)
+
+### Features
+
+* **lint:** add lint and formatting scripts ([6498a16](https://github.com/casaper/llm-util/commit/6498a160bdc60b975b6284c5015e52d37e11f7e0))
+* **msToHumanDuration:** convert milliseconds to human duration ([5b33ddd](https://github.com/casaper/llm-util/commit/5b33ddd4c847d07891719ba510cee38dcd96a2cd))
+* **vitest:** install vitest ([589a207](https://github.com/casaper/llm-util/commit/589a20702e515cf6f5b46a9c79d19acf08bf637c))
+
+### Bug Fixes
+
+* **createFrontMatter:** create_at as iso string date time ([cf9cbca](https://github.com/casaper/llm-util/commit/cf9cbcabba6c4efd54f79478c56f692493929d27))
+
 ## [1.2.1](https://github.com/casaper/llm-util/compare/v1.2.0...v1.2.1) (2025-10-12)
 
 ### Bug Fixes
