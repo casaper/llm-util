@@ -1,3 +1,9 @@
+## [1.4.0](https://github.com/casaper/llm-util/compare/v1.3.0...v1.4.0) (2025-10-13)
+
+### Features
+
+* **pnpm-updates:** vite-tsconfig-paths ([31930b9](https://github.com/casaper/llm-util/commit/31930b967ab7b68a6c0527de11e215a289e30eb9))
+
 ## [1.3.0](https://github.com/casaper/llm-util/compare/v1.2.1...v1.3.0) (2025-10-13)
 
 ### Features
