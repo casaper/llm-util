@@ -39,6 +39,7 @@ export const factsCommand = createCommand('facts')
       console.log(
         `${getDebugFrontMatter(response, debug)}${response.message.content}`
       );
+      process.exit(0);
     } catch (error) {
       if (error instanceof Error) {
         console.error(`${error.name}: ${error.message}`, error);
