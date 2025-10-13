@@ -19,7 +19,7 @@ export const createFrontMatter = ({
     `eval_duration: ${eval_duration}`,
     `load_duration: ${load_duration}`,
     `prompt_eval_duration: ${prompt_eval_duration}`,
-    `created_at: ${created_at}`,
+    `created_at: ${created_at.toISOString()}`,
     '---',
     '',
     '',
