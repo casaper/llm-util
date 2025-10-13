@@ -34,7 +34,11 @@
     "postbuild": "chmod +x dist/llm-util.js",
     "prepublishOnly": "pnpm run build",
     "test": "vitest",
-    "test:watch": "vitest --watch"
+    "test:watch": "vitest --watch",
+    "lint": "eslint --format unix 'src/**/*.ts' '*.{ts,mts}'",
+    "fmt:prettier": "prettier -w '*.{json,yaml,yml,md}'",
+    "fmt:eslint": "eslint --format unix --fix 'src/**/*.ts' '*.{ts,mts}'",
+    "fmt": "run-s fmt:prettier fmt:eslint"
   },
   "dependencies": {
     "@commander-js/extra-typings": "^14.0.0",
