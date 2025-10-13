@@ -1,3 +1,9 @@
+## [1.5.0](https://github.com/casaper/llm-util/compare/v1.4.1...v1.5.0) (2025-10-13)
+
+### Features
+
+* add command to generate conventional commit message from staged git diff ([d262193](https://github.com/casaper/llm-util/commit/d262193f19b7d84696524296d2c13890b986a56e))
+
 ## [1.4.1](https://github.com/casaper/llm-util/compare/v1.4.0...v1.4.1) (2025-10-13)
 
 ### Bug Fixes
