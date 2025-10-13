@@ -1,9 +1,4 @@
-rbs_collection.lock.yaml
-.trunk/*out
-.trunk/*logs
-.trunk/*actions
-.trunk/*notifications
-.trunk/*tools
-.trunk/plugins
-.trunk/tmp
 node_modules
+dist
+pnpm-lock.yaml
+CHANGELOG.md

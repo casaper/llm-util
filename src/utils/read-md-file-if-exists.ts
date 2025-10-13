@@ -1,21 +1,7 @@
-import { existsSync } from 'fs';
 import { readFile } from 'fs/promises';
-import { resolve } from 'path/posix';
 
-class FileNotFoundError extends Error {
-  name = 'FileNotFoundError';
-  constructor(filePath: string) {
-    super(`File not found: ${filePath}`);
-  }
-}
-
-const fileAbsPathAndExists = (filePath: string) => {
-  const absPath = resolve(process.cwd(), filePath);
-  if (!existsSync(absPath)) {
-    throw new FileNotFoundError(filePath);
-  }
-  return absPath;
-};
+import { fileAbsPathAndExists } from './file-abs-path-and-exists';
+import { FileNotFoundError } from './file-not-found-error';
 
 export const readMdFileIfExists = async (filePath: string) => {
   try {
