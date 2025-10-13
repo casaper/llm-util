@@ -1,3 +1,9 @@
+## [1.4.1](https://github.com/casaper/llm-util/compare/v1.4.0...v1.4.1) (2025-10-13)
+
+### Bug Fixes
+
+* **commands:** exit with signal 0 after logging result ([bac792e](https://github.com/casaper/llm-util/commit/bac792e0f5e07eda836a6ee73bb55ee8724fe494))
+
 ## [1.4.0](https://github.com/casaper/llm-util/compare/v1.3.0...v1.4.0) (2025-10-13)
 
 ### Features
