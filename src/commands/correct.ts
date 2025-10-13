@@ -32,8 +32,9 @@ const userPrompts = {
 
 export const correctCommand = createCommand('correct')
   .description(
-    'Correct spelling, grammar, and improve clarity of a Markdown file.'
+    'Correct spelling, grammar, and improve clarity of a markdown file or markdown stdin'
   )
+  .usage(`llm-util correct [options] [mdFile | -]`)
   .addArgument(createArgument('[mdFile]', 'Markdown file path'))
   .addOption(
     createOption('-l, --lang <lang>', 'Language to proofread.')

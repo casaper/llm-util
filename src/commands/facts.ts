@@ -5,7 +5,10 @@ import { debugOption, modelOption } from '../options';
 import { getDebugFrontMatter, loadMdFileOrStdin } from '../utils';
 
 export const factsCommand = createCommand('facts')
-  .description('Extract bullet point facts from job description markdown file')
+  .description(
+    'Extract bullet point facts from job description markdown file or markdown stdin'
+  )
+  .usage(`llm-util facts [options] [mdFile | -]`)
   .addArgument(createArgument('[mdFile]', 'Markdown file path'))
   .addOption(modelOption)
   .addOption(debugOption)
