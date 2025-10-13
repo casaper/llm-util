@@ -59,7 +59,7 @@ export const correctCommand = createCommand('correct')
         ],
       });
       console.log(
-        `${getDebugFrontMatter(debug, response)}${response.message.content}`
+        `${getDebugFrontMatter(response, debug)}${response.message.content}`
       );
     } catch (error) {
       if (error instanceof Error) {
