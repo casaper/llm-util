@@ -1,3 +1,9 @@
+## [1.5.1](https://github.com/casaper/llm-util/compare/v1.5.0...v1.5.1) (2025-10-13)
+
+### Bug Fixes
+
+* **commit:** conventional commit instructions LLM improved ([92681e3](https://github.com/casaper/llm-util/commit/92681e36c3fff81ec7c3d987b4fa5c31bb19725d))
+
 ## [1.5.0](https://github.com/casaper/llm-util/compare/v1.4.1...v1.5.0) (2025-10-13)
 
 ### Features
