@@ -22,7 +22,7 @@ async function getStagedGitDiff(): Promise<string> {
 
 export const commitCommand = createCommand('commit')
   .description(
-    'Generate conventional commit message from currently staged git diff. The generated commit message is printed to stdout.'
+    'Generate conventional commit message from currently staged git diff. The generated commit message is printed to stdout. gpt-oss or llama3.3 delivered good results in my tests.'
   )
   .usage(`llm-util commit [options]`)
   .addOption(modelOption)
