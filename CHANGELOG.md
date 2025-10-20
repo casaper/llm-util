@@ -1,3 +1,9 @@
+## [1.6.0](https://github.com/casaper/llm-util/compare/v1.5.1...v1.6.0) (2025-10-20)
+
+### Features
+
+* **pnpm-updates:** 9 packages - @eslint/js @semantic-release/github... ([245dcdc](https://github.com/casaper/llm-util/commit/245dcdc255e24df6b6bcea0861133f1c6de5c577))
+
 ## [1.5.1](https://github.com/casaper/llm-util/compare/v1.5.0...v1.5.1) (2025-10-13)
 
 ### Bug Fixes
