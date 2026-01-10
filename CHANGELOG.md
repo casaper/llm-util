@@ -1,3 +1,14 @@
+## [1.7.0](https://github.com/casaper/llm-util/compare/v1.6.0...v1.7.0) (2026-01-10)
+
+### Features
+
+* **pnpm-updates:** 13 packages - @eslint/js @eslint/json @types/node... ([06aa88d](https://github.com/casaper/llm-util/commit/06aa88d3c25885c92016afaea3ac2b73c24e0f78))
+* **pnpm-updates:** 8 packages - @semantic-release/github [@semantic](https://github.com/semantic)-... ([1211aa4](https://github.com/casaper/llm-util/commit/1211aa4ab2bb1ab898aa7eae92959fbb9095078d))
+
+### Bug Fixes
+
+* **ci:** semantic release config broken ([1d706f5](https://github.com/casaper/llm-util/commit/1d706f5b462c3f377a340a56beba20d71b9445c9))
+
 ## [1.6.0](https://github.com/casaper/llm-util/compare/v1.5.1...v1.6.0) (2025-10-20)
 
 ### Features
