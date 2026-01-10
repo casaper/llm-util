@@ -34,14 +34,10 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "run-s clean build:types build:cjs postbuild",
+    "build": "bash tasks/build_dist.sh",
     "release": "semantic-release",
-    "build:cjs": "esbuild src/llm-util.ts --bundle --platform=node --target=node22 --format=cjs --tsconfig=tsconfig.build.json --outfile=dist/llm-util.js --banner:js=\"#!/usr/bin/env node\" --tree-shaking=true --minify --analyze",
-    "build:types": "tsc -p tsconfig.build.json",
-    "clean": "rimraf dist",
-    "prepare": "pnpm run build",
-    "postbuild": "chmod +x dist/llm-util.js",
-    "prepublishOnly": "pnpm run build",
+    "prepare": "run-s build",
+    "prepublishOnly": "run-s build",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "lint": "eslint --format unix 'src/**/*.ts' '*.{ts,mts}'",
@@ -93,6 +89,6 @@
   },
   "packageManager": "pnpm@10.28.0",
   "engines": {
-    "node": ">= 22"
+    "node": ">= 24"
   }
 }
