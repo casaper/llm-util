@@ -29,11 +29,22 @@
         "changelogFile": "CHANGELOG.md"
       }
     ],
-    "@semantic-release/npm",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": true,
+        "tarballDir": "dist"
+      }
+    ],
     [
       "@semantic-release/github",
       {
-        "assets": [{ "path": "dist/llm-util.js", "label": "CLI (dist)" }]
+        "assets": [
+          {
+            "path": "dist/llm-util.js",
+            "label": "CLI (dist)"
+          }
+        ]
       }
     ],
     [
