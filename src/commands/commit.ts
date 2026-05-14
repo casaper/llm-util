@@ -14,9 +14,10 @@ async function getStagedGitDiff(): Promise<string> {
     const { stdout } = await execAsync('git diff --staged');
     return stdout;
   } catch (error) {
-    throw new Error(
+    console.error(
       `Failed to get staged git diff: ${error instanceof Error ? error.message : error}`
     );
+    throw error;
   }
 }
 
