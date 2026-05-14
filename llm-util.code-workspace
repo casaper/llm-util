@@ -4,5 +4,11 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"inlineChat.defaultModel": "qwen3.6:35b-a3b-coding-mxfp8 (ollama)",
+		"chat.planAgent.defaultModel": "qwen3.6:35b-a3b-coding-mxfp8 (ollama)",
+		"chat.mcp.discovery.enabled": {
+			"claude-desktop": true
+		}
+	}
 }
