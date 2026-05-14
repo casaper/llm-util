@@ -1,3 +1,9 @@
+## [1.8.0](https://github.com/casaper/llm-util/compare/v1.7.0...v1.8.0) (2026-05-14)
+
+### Features
+
+* **pnpm-updates:** 24 packages - @eslint/js @eslint/json [@semantic-r](https://github.com/semantic-r)... ([8867566](https://github.com/casaper/llm-util/commit/8867566fcf92460e6c64306818cf7c92eaf0b142))
+
 ## [1.7.0](https://github.com/casaper/llm-util/compare/v1.6.0...v1.7.0) (2026-01-10)
 
 ### Features
