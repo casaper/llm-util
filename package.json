@@ -89,6 +89,6 @@
   },
   "packageManager": "pnpm@11.1.1",
   "engines": {
-    "node": ">= 24"
+    "node": ">=25 <26"
   }
 }
